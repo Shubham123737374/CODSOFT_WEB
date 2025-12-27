@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921; /* Dark Background */
+}
+
+.container {
+    position: relative;
+}
+
+.calculator {
+    background: #091921;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.5), 
+                -15px -15px 20px rgba(255,255,255,0.05); /* Neumorphism Effect */
+}
+
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3), 
+                -5px -5px 10px rgba(255,255,255,0.05);
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+/* Hover Effect */
+.calculator form input:hover {
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3), 
+                inset -5px -5px 10px rgba(255,255,255,0.05);
+}
+
+/* Display Screen Style */
+.display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+    padding-right: 20px; 
+    width: 100% !important; /* Screen puri width lega */
+    color: #00bcd4; /* Cyan Text Color */
+}
+
+/* Operators Color */
+.operator {
+    color: #00bcd4 !important;
+    font-weight: bold;
+}
+
+/* Equal Button Size */
+form .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Columns Grid */
+}
+
+.equal {
+    width: 145px !important; /* Equal button thoda bada */
+    grid-column: span 2; /* 2 columns ki jagah lega */
+    background: #00bcd4 !important;
+    color: #091921 !important;
+    box-shadow: none !important;
+}
+
+.equal:hover {
+    background: #0097a7 !important;
+}
